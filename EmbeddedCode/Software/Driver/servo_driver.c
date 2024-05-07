@@ -35,8 +35,8 @@ STATE_define(SetValve)
 	//State Name
 	servo_state_id=SetValve;
 	//State action
-	servo_state=STATE(HoldValve);
 	//set pwm here to get specific value
+	servo_state=STATE(HoldValve);
 
 
 }

@@ -27,6 +27,7 @@ STATE_define(FSR_Reading)
 	//State Name
 	FSR_state_id=FSR_Reading;
 	//State action
+	getFSR(char *FSRm);
 
 }
 
@@ -35,5 +36,5 @@ STATE_define(FSR_Busy)
 	//State Name
 	FSR_state_id=FSR_Busy;
 	//State action
-
+	FSR_state=STATE(FSR_Reading);
 }

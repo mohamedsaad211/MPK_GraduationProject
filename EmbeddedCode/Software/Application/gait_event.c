@@ -61,6 +61,7 @@ STATE_define(HC)
 	//State action
 	Flex_Valve =high;
 	Ext_Valve =Free;
+	set_servo(Flex_Valve,Ext_Valve);
 
 }
 
@@ -71,6 +72,7 @@ STATE_define(FF)
 	//State action
 	Flex_Valve =mid;
 	Ext_Valve =Free;
+	set_servo(Flex_Valve,Ext_Valve);
 }
 
 STATE_define(HO)
@@ -80,6 +82,7 @@ STATE_define(HO)
 	//State action
 	Flex_Valve =Free;
 	Ext_Valve =Free;
+	set_servo(Flex_Valve,Ext_Valve);
 }
 
 STATE_define(TO)
@@ -89,6 +92,7 @@ STATE_define(TO)
 	//State action
 	Flex_Valve =low;
 	Ext_Valve =Free;
+	set_servo(Flex_Valve,Ext_Valve);
 }
 
 STATE_define(SFlex)
@@ -98,6 +102,7 @@ STATE_define(SFlex)
 	//State action
 	Flex_Valve =lock;
 	Ext_Valve =Free;
+	set_servo(Flex_Valve,Ext_Valve);
 }
 
 STATE_define(SExt)
@@ -107,4 +112,5 @@ STATE_define(SExt)
 	//State action
 	Flex_Valve =lock;
 	Ext_Valve =mid;
+	set_servo(Flex_Valve,Ext_Valve);
 }

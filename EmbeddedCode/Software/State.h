@@ -19,7 +19,7 @@
 
 // state connections
 void getKneeVel(int vel);
-void getFSR(int FSR[]);
+void getFSR(char FSR[]);
 void set_servo(int flex,int ext);
 
 
