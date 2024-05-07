@@ -8,13 +8,7 @@
 #ifndef GAIT_EVENT_H_
 #define GAIT_EVENT_H_
 
-#include "state.h"
-
-// Module local variable
-unsigned char Gait_event=0
-char FSR[4]={0,0,0,0};
-
-
+#include "../state.h"
 
 
 enum
@@ -30,15 +24,15 @@ enum
 
 //state function prototyping
 
-STATE_define(Gevent_HC);
-STATE_define(Gevent_FF);
-STATE_define(Gevent_HO);
-STATE_define(Gevent_TO);
-STATE_define(Gevent_SFlex);
-STATE_define(Gevent_SExt);
+STATE_define(HC);
+STATE_define(FF);
+STATE_define(HO);
+STATE_define(TO);
+STATE_define(SFlex);
+STATE_define(SExt);
 
 //Global variable
-//extern void (*US_state)();
+extern void (*Gevent_state)();
 
 
 #endif /* GAIT_EVENT_H_ */

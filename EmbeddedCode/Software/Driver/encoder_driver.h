@@ -8,15 +8,13 @@
 #ifndef DRIVER_ENCODER_DRIVER_H_
 #define DRIVER_ENCODER_DRIVER_H_
 
-#include "state.h"
+#include "../state.h"
 
-// Module local variable
-int KneeAngleVel =0;
 
 
 enum {
-	Reading,
-	Busy
+	encoder_Reading,
+	encoder_Busy
 }encoder_state_id;
 
 
@@ -27,7 +25,7 @@ STATE_define(encoder_Busy);
 
 
 //Global variable
-extern void (*US_state)();
+extern void (*encoder_state)();
 
 
 #endif /* DRIVER_ENCODER_DRIVER_H_ */

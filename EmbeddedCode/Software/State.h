@@ -18,8 +18,9 @@
 
 
 // state connections
-//void US_set_distance(int d);
-//void DC_motor(int s);
+void getKneeVel(int vel);
+void getFSR(int FSR[]);
+void set_servo(int flex,int ext);
 
 
 #endif /* STATE_H_ */

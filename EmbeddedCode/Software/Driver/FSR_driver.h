@@ -8,14 +8,12 @@
 #ifndef DRIVER_FSR_DRIVER_H_
 #define DRIVER_FSR_DRIVER_H_
 
-#include "state.h"
+#include "../state.h"
 
-// Module local variable
-char FSR[4]={0,0,0,0};
 
 enum {
-	Reading,
-	Busy
+	FSR_Reading,
+	FSR_Busy
 }FSR_state_id;
 
 //state function prototyping
@@ -25,7 +23,7 @@ STATE_define(FSR_Busy);
 
 
 //Global variable
-//extern void (*US_state)();
+extern void (*FSR_state)();
 
 
 
