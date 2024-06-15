@@ -1,0 +1,13 @@
+pi=3.14159;
+d1=12.5;                            %hydrulic cylinder diameter (mm)
+d2=10;                              %piston rod diameter        (mm)
+a1=((d1/4)^2)*pi;                   %cylinder area              (mm^2)
+ap=((d2/4)^2)*pi;                   %piston rod area            (mm^2)
+a2=a1-ap;                           %area_2                     (mm^2)
+cyl_length=63.554;                  %cylinder lenght            (mm)
+piston_width=15.546;                %piston width               (mm)
+stroke=cyl_length-piston_width;     %piston stroke              (mm)
+p=8;                                %path diameter              (mm)
+p_area=((p/4)^2)*pi;
+p_1=50;                           %path_length 1 (mm)
+p_2=50;                           %path_length 2 (mm)

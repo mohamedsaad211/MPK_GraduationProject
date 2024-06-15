@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<SimscapeMultibodyImportXML version="2.0" xmlns="urn:mathworks:SimscapeMultibody:import" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Created by="top10" on="12/10/23||01:21:54" using="Simscape Multibody Link Version 7.0" from="Autodesk Inventor 2021 (Build 250183000, 183)"/>
+<ModelUnits mass="kilogram" length="millimeter"/>
+<DataUnits mass="kilogram" length="centimeter"/>
+<RootAssembly name="SimAssembly.iam" uid="SimAssembly.iam_{27E4C1A8-4EB7-F06C-8236-F2BC77FB6750}" version="{A5644127-6F96-C142-6353-AE40716BF348}">
+<AssemblyFile name="SimAssembly.iam" type="Inventor Assembly"/>
+<InstanceTree>
+<Instance name="kneeJoint:1" grounded="true" uid="kneeJoint:1" entityUid="kneeJoint.ipt_{465C7AFE-4B22-6664-F5FA-CA8528283578}">
+<Transform>
+<Rotation>0 -0.029674411426561853 -0.99955961768495005 2.9099068753962349e-16 0.99955961768495205 -0.029674411426561631 0.99999999999999978 0 -1.1987479004681412e-15</Rotation>
+<Translation>8.7876793866502805 -34.460306651218147 -6.6315599398952259</Translation>
+</Transform>
+</Instance>
+<Instance name="CarbonFiberShank:1" uid="CarbonFiberShank:1" entityUid="CarbonFiberShank.ipt_{0A93E6D9-4257-B084-F3D8-449A8686E5D6}">
+<Transform>
+<Rotation>0 -0.31693773678845705 -0.94844634587276944 2.9099068753962246e-16 0.94844634587276944 -0.31693773678845732 0.99999999999999889 -7.2605524551217186e-16 -1.0023644337076504e-15</Rotation>
+<Translation>17.90950856222149 -30.599489633756857 -6.6865599398952043</Translation>
+</Transform>
+</Instance>
+<Instance name="H_cylinderAssembly:1" uid="H_cylinderAssembly:1" entityUid="H_cylinderAssembly.iam_{DF54FF59-41F4-D7DD-89FA-8EA43E7FEF56}">
+<Transform>
+<Rotation>-0.20776988160963461 0.073507982132766256 -0.97541183756333905 0.97700597529181377 0.064388611120353267 -0.20325705646321274 0.047864397416194568 -0.9952138882274314 -0.085195751884840812</Rotation>
+<Translation>-14.82311288602178 13.69369767695899 50.1773420183819</Translation>
+</Transform>
+<Instance name="piston_rod:1" uid="piston_rod:1" entityUid="piston_rod.ipt_{7BC4D436-47AE-47E2-8163-DE85CCBBFAB8}">
+<Transform>
+<Rotation>0.047864397416198877 0.99341671173238422 -0.10407802991423394 -0.99521388822743662 0.038543012110961034 -0.089798401414798362 -0.085195751884841353 0.10787804720264876 0.99050694636258041</Rotation>
+<Translation>-52.212770573002899 56.11416103252472 -18.013143676271408</Translation>
+</Transform>
+</Instance>
+<Instance name="H_cylinder:1" uid="H_cylinder:1" entityUid="H_cylinder.ipt_{5995D37A-4AE2-5363-45E3-F2AC207973BF}">
+<Transform>
+<Rotation>0.04786439741619903 0.99341671173218071 -0.10407802991624256 -0.99521388822743773 0.03854301211078176 -0.089798401414871679 -0.085195751884841409 0.10787804720465292 0.99050694636236758</Rotation>
+<Translation>-52.926113843411677 56.076872631677773 -17.978327520089408</Translation>
+</Transform>
+</Instance>
+</Instance>
+</InstanceTree>
+<Constraints>
+<Coincident name="Mate:2">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>H_cylinderAssembly:1</Uid>
+<Uid>piston_rod:1</Uid>
+</InstancePath>
+<Position>9.1065599398950248 33.732192209166065 9.969010838483138</Position>
+<Axis>-0.99999999999999356 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>kneeJoint:1</Uid>
+</InstancePath>
+<Position>3.6765599398952324 33.732192209160281 9.9690108385043033</Position>
+<Axis>1.0000000000000002 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+</Constraints>
+<Joints>
+<Revolute name="Rotational:1">
+<BaseFrame>
+<InstancePath>
+<Uid>CarbonFiberShank:1</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 0 -1 -2.2204460492503104e-16 -1 0 -1 2.2204460492503104e-16 0</Rotation>
+<Translation>3.7315599398951766 33.097777589005204 7.5508466402471077</Translation>
+</Transform>
+</BaseFrame>
+<FollowerFrame>
+<InstancePath>
+<Uid>kneeJoint:1</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 0 -1 0.99955961768495183 -0.029674411426561895 0 -0.029674411426561895 -0.99955961768495183 0</Rotation>
+<Translation>3.6765599398952293 33.097777589005432 7.5508466402469026</Translation>
+</Transform>
+</FollowerFrame>
+</Revolute>
+<Revolute name="Rotational:3">
+<BaseFrame>
+<InstancePath>
+<Uid>CarbonFiberShank:1</Uid>
+</InstancePath>
+<Transform>
+<Rotation>1.3828539332617707e-16 -1.0781707363711704e-16 -1 -0.66488578568313383 0.74694503947514246 -1.7247742071414712e-16 0.74694503947514246 0.66488578568313383 0</Rotation>
+<Translation>5.6703800307747745 14.128850671545916 13.889601376003961</Translation>
+</Transform>
+</BaseFrame>
+<FollowerFrame>
+<InstancePath>
+<Uid>H_cylinderAssembly:1</Uid>
+<Uid>H_cylinder:1</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 0 -1 -0.15671547127855634 -0.98764379260031809 0 -0.98764379260031809 0.15671547127855634 0</Rotation>
+<Translation>5.6165599398939428 14.128850671545909 13.889601376003959</Translation>
+</Transform>
+</FollowerFrame>
+</Revolute>
+</Joints>
+</RootAssembly>
+<Assemblies>
+<Assembly name="H_cylinderAssembly.iam" uid="H_cylinderAssembly.iam_{DF54FF59-41F4-D7DD-89FA-8EA43E7FEF56}" version="{2A7C07A2-9203-38A3-8394-D48C6DE9C13C}">
+<AssemblyFile name="H_cylinderAssembly.iam" type="Inventor Assembly"/>
+<Constraints>
+</Constraints>
+<Joints>
+<Cylindrical name="Cylindrical:1">
+<BaseFrame>
+<InstancePath>
+<Uid>H_cylinder:1</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 -1 0 -0.15671547127855376 0 0.98764379260031843 -0.98764379260031843 0 -0.15671547127855376</Rotation>
+<Translation>6.6665599398939408 25.316874189881688 11.304320733851609</Translation>
+</Transform>
+</BaseFrame>
+<FollowerFrame>
+<InstancePath>
+<Uid>piston_rod:1</Uid>
+</InstancePath>
+<Transform>
+<Rotation>0 1 0 0.1567154712785537 0 0.98764379260031843 0.98764379260031843 0 -0.1567154712785537</Rotation>
+<Translation>6.6665599398938644 22.320399285520441 11.779789703861727</Translation>
+</Transform>
+</FollowerFrame>
+</Cylindrical>
+</Joints>
+</Assembly>
+</Assemblies>
+<Parts>
+<Part name="CarbonFiberShank.ipt" uid="CarbonFiberShank.ipt_{0A93E6D9-4257-B084-F3D8-449A8686E5D6}" version="{4D5D7F5D-F79D-B4B4-92F9-0DA05CE56B87}">
+<ModelUnits mass="lbmass" length="inch"/>
+<PartFile name="CarbonFiberShank.ipt" type="Inventor Part"/>
+<MassProperties>
+<Mass>0.54612367591143784</Mass>
+<CenterOfMass>6.7320229490855255 20.775519076396098 11.638636137195872</CenterOfMass>
+<Inertia>56.781259770845644 11.358263248415009 51.978972506187681 16.200137630081734 0.1392154644577604 -0.38711251245767925</Inertia>
+</MassProperties>
+<GeometryFile name="CarbonFiberShank_ipt_ba213d82.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.74901960784313726" g="0.74901960784313726" b="0.74901960784313726" a="1"/>
+<Diffuse r="0.74901960784313726" g="0.74901960784313726" b="0.74901960784313726" a="1"/>
+<Specular r="0" g="0" b="0" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.14999999999999999</Shininess>
+</VisualProperties>
+</Part>
+<Part name="H_cylinder.ipt" uid="H_cylinder.ipt_{5995D37A-4AE2-5363-45E3-F2AC207973BF}" version="{9FF3C264-9C8C-2220-DC1A-F0DD7701A9F3}">
+<ModelUnits mass="lbmass" length="inch"/>
+<PartFile name="H_cylinder.ipt" type="Inventor Part"/>
+<MassProperties>
+<Mass>0.54612367591143784</Mass>
+<CenterOfMass>6.7320229490855255 20.775519076396098 11.638636137195872</CenterOfMass>
+<Inertia>56.781259770845644 11.358263248415009 51.978972506187681 16.200137630081734 0.1392154644577604 -0.38711251245767925</Inertia>
+</MassProperties>
+<GeometryFile name="H_cylinder_ipt_a1ebdfc9.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.74901960784313726" g="0.74901960784313726" b="0.74901960784313726" a="1"/>
+<Diffuse r="0.74901960784313726" g="0.74901960784313726" b="0.74901960784313726" a="1"/>
+<Specular r="0" g="0" b="0" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.14999999999999999</Shininess>
+</VisualProperties>
+</Part>
+<Part name="kneeJoint.ipt" uid="kneeJoint.ipt_{465C7AFE-4B22-6664-F5FA-CA8528283578}" version="{20EF9F72-4125-4CAC-FD50-7F57D80ED904}">
+<ModelUnits mass="lbmass" length="inch"/>
+<PartFile name="kneeJoint.ipt" type="Inventor Part"/>
+<MassProperties>
+<Mass>0.54612367591143784</Mass>
+<CenterOfMass>6.7320229490855255 20.775519076396098 11.638636137195872</CenterOfMass>
+<Inertia>56.781259770845644 11.358263248415009 51.978972506187681 16.200137630081734 0.1392154644577604 -0.38711251245767925</Inertia>
+</MassProperties>
+<GeometryFile name="kneeJoint_ipt_f6bc7d39.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.74901960784313726" g="0.74901960784313726" b="0.74901960784313726" a="1"/>
+<Diffuse r="0.74901960784313726" g="0.74901960784313726" b="0.74901960784313726" a="1"/>
+<Specular r="0" g="0" b="0" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.14999999999999999</Shininess>
+</VisualProperties>
+</Part>
+<Part name="piston_rod.ipt" uid="piston_rod.ipt_{7BC4D436-47AE-47E2-8163-DE85CCBBFAB8}" version="{32A640BD-1D5E-EEC0-EE6A-75E9E40BB383}">
+<ModelUnits mass="lbmass" length="inch"/>
+<PartFile name="piston_rod.ipt" type="Inventor Part"/>
+<MassProperties>
+<Mass>0.54612367591143784</Mass>
+<CenterOfMass>6.7320229490855255 20.775519076396098 11.638636137195872</CenterOfMass>
+<Inertia>56.781259770845644 11.358263248415009 51.978972506187681 16.200137630081734 0.1392154644577604 -0.38711251245767925</Inertia>
+</MassProperties>
+<GeometryFile name="piston_rod_ipt_9db80511.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.74901960784313726" g="0.74901960784313726" b="0.74901960784313726" a="1"/>
+<Diffuse r="0.74901960784313726" g="0.74901960784313726" b="0.74901960784313726" a="1"/>
+<Specular r="0" g="0" b="0" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.14999999999999999</Shininess>
+</VisualProperties>
+</Part>
+</Parts>
+</SimscapeMultibodyImportXML>
